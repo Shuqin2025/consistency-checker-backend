@@ -28,6 +28,7 @@ def check():
 
     # POST：真正的检测逻辑
     data = request.get_json(silent=True) or {}
+    print("收到请求数据:", data)  # 新增调试输出
     paragraphs = data.get("paragraphs", [])
 
     result = []
